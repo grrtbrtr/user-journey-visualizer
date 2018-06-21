@@ -20,6 +20,7 @@ node_modules/
 
 # OS or Editor folders
 .DS_Store
+.tags*
 
 # Output folder
 build/
