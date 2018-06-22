@@ -1,11 +1,30 @@
 class App {
 
-  constructor() {
-    console.log('App instance created');
+  /**
+   * Constructor
+   *
+   * @public
+   * @param {String} containerId The ID of the HTML app container element.
+   * @returns {App} An instance of App.
+   */
+  constructor(containerId) {
+    this.container = document.getElementById(containerId);
+
+    if (this.container) {
+      this.init();
+    } else {
+      throw new Error(`HTML element with id "${containerId}" not found.`);
+    }
   }
 
+  /**
+   * Initialize the application
+   *
+   * @private
+   * @returns {void}
+   */
   init() {
-    console.log('App init called');
+    console.log('init');
   }
 
 }
