@@ -1,6 +1,10 @@
-const App = {
+class App {
 
-  init: () => {
+  constructor() {
+    console.log('App instance created');
+  }
+
+  init() {
     console.log('App init called');
   }
 
