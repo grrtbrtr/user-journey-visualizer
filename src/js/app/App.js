@@ -1,4 +1,6 @@
-import JSONLoader from './JSONLoader';
+import JSONLoader from './utils/JSONLoader';
+
+import UI from './ui/UI';
 
 class App {
 
@@ -30,6 +32,8 @@ class App {
    * @returns {void}
    */
   init() {
+    this.ui = new UI(this.container);
+
     JSONLoader.load(this.dataFilePath).then((response) => {
       console.log(response);
     }, (error) => {
