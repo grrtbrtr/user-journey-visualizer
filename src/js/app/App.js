@@ -1,3 +1,5 @@
+import JSONLoader from './JSONLoader';
+
 class App {
 
   /**
@@ -5,10 +7,13 @@ class App {
    *
    * @public
    * @param {String} containerId The ID of the HTML app container element.
+   * @param {String} dataFilePath The path to the data file.
+   *
    * @returns {App} An instance of App.
    */
-  constructor(containerId) {
+  constructor(containerId, dataFilePath) {
     this.container = document.getElementById(containerId);
+    this.dataFilePath = dataFilePath;
 
     if (this.container) {
       this.init();
@@ -21,10 +26,15 @@ class App {
    * Initialize the application
    *
    * @private
+   *
    * @returns {void}
    */
   init() {
-    console.log('init');
+    JSONLoader.load(this.dataFilePath).then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
+    });
   }
 
 }
