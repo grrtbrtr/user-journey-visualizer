@@ -1,0 +1,26 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# sass/scss
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# OS or Editor folders
+.DS_Store
+.tags*
+
+# Output folder
+build/
