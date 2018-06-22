@@ -1,5 +1,4 @@
 module.exports = {
-    "root": true,
     "env": {
         "browser": true,
         "es6": true
@@ -16,7 +15,13 @@ module.exports = {
         "array-element-newline": "error",
         "arrow-body-style": "error",
         "arrow-parens": "error",
-        "arrow-spacing": "error",
+        "arrow-spacing": [
+            "error",
+            {
+                "after": true,
+                "before": true
+            }
+        ],
         "block-scoped-var": "error",
         "block-spacing": "error",
         "brace-style": "error",
@@ -51,9 +56,12 @@ module.exports = {
         "id-blacklist": "error",
         "id-length": "error",
         "id-match": "error",
-        "implicit-arrow-linebreak": "error",
-        "indent": "error",
-        "indent-legacy": "error",
+        "implicit-arrow-linebreak": [
+            "error",
+            "beside"
+        ],
+        "indent": "off",
+        "indent-legacy": "off",
         "init-declarations": "error",
         "jsx-quotes": "error",
         "key-spacing": "error",
@@ -77,7 +85,10 @@ module.exports = {
         "multiline-ternary": "error",
         "new-cap": "error",
         "new-parens": "error",
-        "newline-after-var": "error",
+        "newline-after-var": [
+            "error",
+            "always"
+        ],
         "newline-before-return": "error",
         "newline-per-chained-call": "error",
         "no-alert": "error",
@@ -183,7 +194,7 @@ module.exports = {
         "one-var-declaration-per-line": "error",
         "operator-assignment": "error",
         "operator-linebreak": "error",
-        "padded-blocks": "error",
+        "padded-blocks": "off",
         "padding-line-between-statements": "error",
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
@@ -194,7 +205,7 @@ module.exports = {
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
-        "quote-props": "error",
+        "quote-props": "off",
         "quotes": [
             "error",
             "single"
@@ -203,9 +214,12 @@ module.exports = {
         "require-await": "error",
         "require-jsdoc": "error",
         "rest-spread-spacing": "error",
-        "semi": "error",
+        "semi": "off",
         "semi-spacing": "error",
-        "semi-style": "error",
+        "semi-style": [
+            "error",
+            "last"
+        ],
         "sort-imports": "error",
         "sort-keys": "error",
         "sort-vars": "error",

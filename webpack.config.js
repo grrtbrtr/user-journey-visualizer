@@ -1,5 +1,6 @@
 'use strict';
 
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -56,8 +57,12 @@ module.exports = {
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
+      filename: "[name].css"
+    }),
+    new CleanWebpackPlugin(
+      ['build'], {
+        verbose: true
+      }
+    )
   ]
 }
