@@ -1,3 +1,64 @@
 {
-  "placeholder": true
+  "title": "Space creation from search",
+  "subtitle": "User journey for search space creation",
+  "personas": [
+    {
+      "id": "brenda-linden",
+      "name": {
+        "firstname": "Brenda",
+        "lastname": "Linden"
+      },
+      "company": "Suono",
+      "function": "Global Field Marketing Manager"
+    },
+    {
+      "id": "lin-snow",
+      "name": {
+        "firstname": "Lin",
+        "lastname": "Snow"
+      },
+      "company": "Suono",
+      "function": "Field Marketer (Spain)"
+    }
+  ],
+  "journeys": [
+    {
+      "title": "User journey A",
+      "subtitle": "Lin wants to make new campaign content available to her local market resellers. Lin cannot publish content, but Brenda can do it for her.",
+      "steps": [
+        {
+          "persona": "lin-snow",
+          "description": "Lin performs a search for the content she wants to make available"
+        },
+        {
+          "persona": "lin-snow",
+          "description": "Lin identified the content she wants to make available"
+        },
+        {
+          "persona": "lin-snow",
+          "description": "Lin indicates that she wants to share the content with Brenda"
+        },
+        {
+          "persona": "lin-snow",
+          "description": "Lin shares the content with Brenda, along with an additional message containing her request to publish the content"
+        },
+        {
+          "persona": "brenda-linden",
+          "description": "Brenda gets notified that Lin shared content with her"
+        },
+        {
+          "persona": "brenda-linden",
+          "description": "Brenda clicks a call-to-action in the notification to see the content & message Lin shared with her"
+        },
+        {
+          "persona": "brenda-linden",
+          "description": "Brenda shares the content with the target audience"
+        },
+        {
+          "persona": "lin-snow",
+          "description": "Lin gets notified that Brenda shared the content"
+        }
+      ]
+    }
+  ]
 }
