@@ -1,17 +1,28 @@
-const generateColor = (seed) => {
-  let index = seed;
+const rgbComponentToHex = (component) => {
+  let hex = Math.
+    round(component).
+    toString(16); // eslint-disable-line no-magic-numbers
 
-  const colors = [
-    '#FF0000',
-    '#00FF00',
-    '#0000FF'
-  ];
-
-  if (index >= colors.length) {
-    index %= colors.length;
+  if (hex.length === 1) { // eslint-disable-line no-magic-numbers
+    hex = `0${hex}`;
   }
 
-  return colors[index];
+  return hex;
+}
+
+const generateColor = () => {
+  const MAX_CHANNEL_VALUE = 255;
+
+  let red = Math.floor(Math.random() * (MAX_CHANNEL_VALUE + 1));
+  let green = Math.floor(Math.random() * (MAX_CHANNEL_VALUE + 1));
+  let blue = Math.floor(Math.random() * (MAX_CHANNEL_VALUE + 1));
+
+  // Turn colors into pastel
+  red = (red + MAX_CHANNEL_VALUE) / 2;
+  green = (green + MAX_CHANNEL_VALUE) / 2;
+  blue = (blue + MAX_CHANNEL_VALUE) / 2;
+
+  return `#${rgbComponentToHex(red)}${rgbComponentToHex(green)}${rgbComponentToHex(blue)}`; // eslint-disable-line max-len
 }
 
 class Persona {
@@ -35,8 +46,14 @@ class Persona {
       company: null,
       title: null
     };
-    this.color = generateColor(Persona.counter);
-    Persona.counter += 1;
+
+    let color = generateColor();
+
+    while (Persona.usedColors.indexOf(color) > -1) {
+      color = generateColor();
+    }
+    this.color = color;
+    Persona.usedColors.push(color);
   }
 
   /**
@@ -52,6 +69,6 @@ class Persona {
 
 }
 
-Persona.counter = 0;
+Persona.usedColors = [];
 
 export default Persona;
