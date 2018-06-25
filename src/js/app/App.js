@@ -1,6 +1,29 @@
 import JSONLoader from './utils/JSONLoader';
-
+import ProjectTitleModel from './models/ProjectTitleModel';
 import UI from './ui/UI';
+import UserJourneyModel from './models/UserJourneyModel';
+
+/**
+ * Parse the data
+ *
+ * @private
+ *
+ * @param {Object} data The data to parse
+ *
+ * @returns {UserJourneyModel} The data as an instance of UserJourneyModel
+ */
+const parseData = (data) => {
+  const userJourneyData = new UserJourneyModel();
+
+  const projectTitleModel = new ProjectTitleModel(
+    data.projectInformation.title,
+    data.projectInformation.subtitle
+  );
+
+  userJourneyData.projectTitle = projectTitleModel;
+
+  return userJourneyData;
+}
 
 class App {
 
@@ -35,9 +58,11 @@ class App {
     this.ui = new UI(this.container);
 
     JSONLoader.load(this.dataFilePath).then((response) => {
-      console.log(response);
+      const data = parseData(response);
+
+      this.ui.render(data);
     }, (error) => {
-      console.log(error);
+      console.log(error); // eslint-disable-line no-console
     });
   }
 

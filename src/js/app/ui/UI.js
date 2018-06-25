@@ -1,3 +1,5 @@
+import ProjectTitleSection from './ProjectTitleSection';
+
 class UI {
 
   /**
@@ -8,7 +10,24 @@ class UI {
    * @param {HTMLElement} containerEl The container element to render the app in
    */
   constructor(containerEl) {
-    console.log(containerEl);
+    this.containerEl = containerEl;
+  }
+
+  /**
+   * Render the UI
+   *
+   * @public
+   *
+   * @param {UserJourneyModel} data The data to render
+   *
+   * @returns {void}
+   */
+  render(data) {
+    this.data = data;
+
+    this.projectTitleSection = new ProjectTitleSection(data.projectTitle);
+
+    this.containerEl.appendChild(this.projectTitleSection);
   }
 
 }

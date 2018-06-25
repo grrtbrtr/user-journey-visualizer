@@ -1,6 +1,8 @@
 {
-  "title": "Space creation from search",
-  "subtitle": "User journey for search space creation",
+  "projectInformation": {
+    "title": "Space creation from search",
+    "subtitle": "User journey for search space creation"
+  },
   "personas": [
     {
       "id": "brenda-linden",
