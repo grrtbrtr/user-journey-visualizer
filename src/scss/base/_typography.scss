@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains basic typography styles.
+// -----------------------------------------------------------------------------
+
+html {
+  font: 100%/1.5 'Roboto', sans-serif;
+}
+
+body {
+  color: rgba(#000000, 0.90);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+h1, h2, p {
+  margin: 0 0 1.5rem;
+}
