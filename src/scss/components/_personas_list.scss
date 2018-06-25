@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains personas list component styles.
+// -----------------------------------------------------------------------------
+
+.personas_list {
+  margin: 0;
+  padding: 0;
+  list-style: none outside none;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__persona {
+    flex: 0 0 100%;
+    margin-bottom: 2.5rem;
+
+    @include respond-to('medium') {
+      flex-basis: 20rem;
+
+      & + & {
+        margin-left: 2.5rem;
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 'use strict';
 
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -37,8 +39,12 @@ module.exports = {
           {
             loader: 'css-loader', // translates CSS into CommonJS
             options: {
-              sourceMap: true
+              sourceMap: true,
+              minimize: true
             }
+          },
+          {
+            loader: 'postcss-loader'
           },
           {
             loader: 'sass-loader', // compiles Sass to CSS
@@ -51,13 +57,23 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: "[name].css"
+    }),
+    new CleanWebpackPlugin(
+      ['build'], {
+        verbose: true
+      }
+    ),
+    new CopyWebpackPlugin([
+      { from: 'data/**/*.json', to: 'data/[name].[ext]' }
+    ], {
+      debug: 'info',
+      context: 'src/'
     })
   ]
 }

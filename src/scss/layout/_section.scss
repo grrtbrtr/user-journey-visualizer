@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains generic section styles.
+// -----------------------------------------------------------------------------
+
+.section {
+  margin: 0 1rem;
+  padding: 1rem 0;
+  width: calc(100% - 2rem);
+
+  @include respond-to('medium') {
+    margin: 0 2.5rem;
+    padding: 2.5rem 0;
+    width: calc(100% - 5rem);
+  }
+
+  border-bottom: 1px solid rgba(#000000, 0.10);
+}
