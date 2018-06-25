@@ -1,4 +1,6 @@
 import JSONLoader from './utils/JSONLoader';
+import Journey from './models/Journey';
+import JourneyStep from './models/JourneyStep';
 import Persona from './models/Persona';
 import ProjectTitleModel from './models/ProjectTitleModel';
 import UI from './ui/UI';
@@ -16,12 +18,16 @@ import UserJourneyModel from './models/UserJourneyModel';
 const parseData = (data) => {
   const userJourneyData = new UserJourneyModel();
 
+  // Project information
+
   const projectTitleModel = new ProjectTitleModel(
     data.projectInformation.title,
     data.projectInformation.subtitle
   );
 
   userJourneyData.projectTitle = projectTitleModel;
+
+  // Personas
 
   const personas = [];
 
@@ -39,6 +45,31 @@ const parseData = (data) => {
   });
 
   userJourneyData.personas = personas;
+
+  // Journeys
+
+  const journeys = [];
+
+  data.journeys.forEach((journey) => {
+    const journeyData = new Journey(journey.title, journey.subtitle);
+
+    journey.steps.forEach((step) => {
+      const stepPersona =
+        personas.find((persona) => persona.id === step.persona);
+
+      if (!stepPersona) {
+        throw new Error('Incorrect persona defined');
+      }
+
+      const stepData = new JourneyStep(step.description, stepPersona);
+
+      journeyData.steps.push(stepData);
+    });
+
+    journeys.push(journeyData);
+  });
+
+  userJourneyData.journeys = journeys;
 
   return userJourneyData;
 }

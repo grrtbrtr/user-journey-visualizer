@@ -5,12 +5,12 @@ class JourneyStep {
    *
    * @public
    *
-   * @param {Persona} persona The persona for this step
    * @param {String} description The step description
+   * @param {Persona} persona The persona for this step
    */
-  constructor(persona, description) {
-    this.persona = persona;
+  constructor(description, persona) {
     this.description = description;
+    this.persona = persona;
   }
 
 }

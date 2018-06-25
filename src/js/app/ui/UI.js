@@ -31,6 +31,8 @@ class UI {
 
     this.containerEl.appendChild(this.projectTitleSection);
     this.containerEl.appendChild(this.personasSection);
+
+    console.log(data.journeys);
   }
 
 }
