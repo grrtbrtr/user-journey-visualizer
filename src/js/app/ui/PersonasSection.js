@@ -38,17 +38,17 @@ class PersonasSection {
 
     const personasContainerEl = document.createElement('ul');
 
-    personasContainerEl.classList.add('personas__list');
+    personasContainerEl.classList.add('personas__list', 'personas_list');
 
     this.personas.forEach((persona) => {
       const personaEl = document.createElement('li');
 
-      personaEl.classList.add('personas__persona', 'persona');
+      personaEl.classList.add('personas_list__persona', 'persona');
       /* eslint-disable max-len */
       personaEl.innerHTML = `<p class="persona__name">${persona.fullName}</p>
         <p class="persona__job_info">
           ${persona.jobInformation.jobTitle} at ${persona.jobInformation.company}
-        </p>${persona.color}`;
+        </p>`;
       /* eslint-enable max-len */
 
       personasContainerEl.appendChild(personaEl);

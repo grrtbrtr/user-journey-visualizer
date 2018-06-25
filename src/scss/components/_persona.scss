@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains persona info component styles.
+// -----------------------------------------------------------------------------
+
+.persona {
+  &__name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__job_info {
+    color: rgba(#000000, 0.60);
+    margin: 0;
+  }
+
+  &--tiny {
+    background: rgba(#000000, 0.05);
+    margin: 0;
+    border-radius: 0.75rem;
+    font-size: 0.75rem;
+    color: rgba(#000000, 0.60);
+    padding: 0 0.5rem;
+    display: inline-block;
+    align-self: flex-start;
+  }
+}

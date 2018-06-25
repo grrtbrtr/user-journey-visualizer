@@ -43,7 +43,7 @@ class JourneySection {
     // Title
 
     this.journeyEl.appendChild(renderElement(
-      'h1',
+      'h2',
       this.journeyData.title,
       ['journey__title']
     ));

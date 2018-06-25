@@ -21,8 +21,6 @@ class JourneyStep {
     this.containerEl = document.createElement(this.elementType);
 
     this.containerEl.classList.add('step');
-    console.log(this.stepData.persona.color);
-    this.containerEl.style.backgroundColor = this.stepData.persona.color;
     this.containerEl.appendChild(renderElement(
       'p',
       this.stepData.description,
@@ -31,7 +29,11 @@ class JourneyStep {
     this.containerEl.appendChild(renderElement(
       'p',
       this.stepData.persona.fullName,
-      ['step__persona']
+      [
+        'step__persona',
+        'persona',
+        'persona--tiny'
+      ]
     ));
 
     return this.containerEl;
