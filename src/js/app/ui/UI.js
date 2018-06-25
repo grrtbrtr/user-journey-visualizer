@@ -1,3 +1,5 @@
+import JourneySection from './JourneySection';
+// Aimport JourneyStep from './JourneyStep';
 import PersonasSection from './PersonasSection';
 import ProjectTitleSection from './ProjectTitleSection';
 
@@ -26,13 +28,11 @@ class UI {
   render(data) {
     this.data = data;
 
-    this.projectTitleSection = new ProjectTitleSection(data.projectTitle);
-    this.personasSection = new PersonasSection(data.personas);
-
-    this.containerEl.appendChild(this.projectTitleSection);
-    this.containerEl.appendChild(this.personasSection);
-
-    console.log(data.journeys);
+    this.containerEl.appendChild(new ProjectTitleSection(data.projectTitle));
+    this.containerEl.appendChild(new PersonasSection(data.personas));
+    data.journeys.forEach((journey) => {
+      this.containerEl.appendChild(new JourneySection(journey));
+    });
   }
 
 }
