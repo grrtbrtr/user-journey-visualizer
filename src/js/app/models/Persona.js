@@ -1,3 +1,19 @@
+const generateColor = (seed) => {
+  let index = seed;
+
+  const colors = [
+    '#FF0000',
+    '#00FF00',
+    '#0000FF'
+  ];
+
+  if (index >= colors.length) {
+    index %= colors.length;
+  }
+
+  return colors[index];
+}
+
 class Persona {
 
   /**
@@ -19,6 +35,8 @@ class Persona {
       company: null,
       title: null
     };
+    this.color = generateColor(Persona.counter);
+    Persona.counter += 1;
   }
 
   /**
@@ -33,5 +51,7 @@ class Persona {
   }
 
 }
+
+Persona.counter = 0;
 
 export default Persona;

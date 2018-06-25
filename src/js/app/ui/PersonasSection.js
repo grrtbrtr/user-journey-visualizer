@@ -48,7 +48,7 @@ class PersonasSection {
       personaEl.innerHTML = `<p class="persona__name">${persona.fullName}</p>
         <p class="persona__job_info">
           ${persona.jobInformation.jobTitle} at ${persona.jobInformation.company}
-        </p>`;
+        </p>${persona.color}`;
       /* eslint-enable max-len */
 
       personasContainerEl.appendChild(personaEl);
