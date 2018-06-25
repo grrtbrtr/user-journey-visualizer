@@ -11,7 +11,7 @@
         "lastname": "Linden"
       },
       "company": "Suono",
-      "function": "Global Field Marketing Manager"
+      "jobTitle": "Global Field Marketing Manager"
     },
     {
       "id": "lin-snow",
@@ -20,7 +20,7 @@
         "lastname": "Snow"
       },
       "company": "Suono",
-      "function": "Field Marketer (Spain)"
+      "jobTitle": "Field Marketer (Spain)"
     }
   ],
   "journeys": [

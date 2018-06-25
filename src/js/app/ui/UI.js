@@ -1,3 +1,4 @@
+import PersonasSection from './PersonasSection';
 import ProjectTitleSection from './ProjectTitleSection';
 
 class UI {
@@ -26,8 +27,10 @@ class UI {
     this.data = data;
 
     this.projectTitleSection = new ProjectTitleSection(data.projectTitle);
+    this.personasSection = new PersonasSection(data.personas);
 
     this.containerEl.appendChild(this.projectTitleSection);
+    this.containerEl.appendChild(this.personasSection);
   }
 
 }

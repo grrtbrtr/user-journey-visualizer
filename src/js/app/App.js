@@ -1,4 +1,5 @@
 import JSONLoader from './utils/JSONLoader';
+import Persona from './models/Persona';
 import ProjectTitleModel from './models/ProjectTitleModel';
 import UI from './ui/UI';
 import UserJourneyModel from './models/UserJourneyModel';
@@ -21,6 +22,23 @@ const parseData = (data) => {
   );
 
   userJourneyData.projectTitle = projectTitleModel;
+
+  const personas = [];
+
+  data.personas.forEach((persona) => {
+    const personaData = new Persona(
+      persona.id,
+      persona.name.firstname,
+      persona.name.lastname
+    );
+
+    personaData.jobInformation.company = persona.company;
+    personaData.jobInformation.jobTitle = persona.jobTitle;
+
+    personas.push(personaData);
+  });
+
+  userJourneyData.personas = personas;
 
   return userJourneyData;
 }

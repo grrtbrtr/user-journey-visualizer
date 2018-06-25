@@ -11,11 +11,11 @@ class ProjectTitleSection {
    */
   constructor(projectTitleData) {
     this.sectionEl = document.createElement('section');
-    this.sectionEl.classList.add(...[
+    this.sectionEl.classList.add(
       'section',
       'section--project_title',
       'project_title'
-    ]);
+    );
 
     this.projectTitleData = projectTitleData;
 

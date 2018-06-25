@@ -6,9 +6,13 @@ class UserJourneyModel {
    * @public
    *
    * @param {ProjectTitleModel} projectTitle The project title data
+   * @param {Array} personas An array of Persona objects
+   *
+   * @see {Persona}
    */
-  constructor(projectTitle = null) {
+  constructor(projectTitle = null, personas = []) {
     this.projectTitle = projectTitle;
+    this.personas = personas;
   }
 
 }
