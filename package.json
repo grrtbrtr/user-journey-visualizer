@@ -1,6 +1,6 @@
 {
   "name": "user-journey-visualizer",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "description": "A tool to quickly visualize multi-user & multi-step user journeys in the browser.",
   "main": "src/index.js",
   "scripts": {
@@ -11,9 +11,9 @@
   "author": "Gerrit Bertier",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^8.6.3",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
+    "autoprefixer": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.1",
