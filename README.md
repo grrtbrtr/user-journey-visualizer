@@ -5,6 +5,6 @@ file.
 
 ## Todo's
 
-- [] Clean up & refactor rendering logic
-- [] Refactor JS file names
-- [] Clean up & refactor SCSS files to fit 7-1 logic
+- [ ] Clean up & refactor rendering logic
+- [ ] Refactor JS file names
+- [ ] Clean up & refactor SCSS files to fit 7-1 logic
