@@ -11,6 +11,11 @@ class ProjectTitleSection {
    */
   constructor(projectTitleData) {
     this.sectionEl = document.createElement('section');
+    this.sectionEl.classList.add(...[
+      'section',
+      'section--project_title',
+      'project_title'
+    ]);
 
     this.projectTitleData = projectTitleData;
 
@@ -27,12 +32,14 @@ class ProjectTitleSection {
   render() {
     const titleEl = document.createElement('h1');
 
+    titleEl.classList.add('project_title__title');
     titleEl.innerHTML = this.projectTitleData.title;
     this.sectionEl.appendChild(titleEl);
 
     if (this.projectTitleData.subtitle) {
       const subtitleEl = document.createElement('p');
 
+      subtitleEl.classList.add('project_title__subtitle');
       subtitleEl.innerHTML = this.projectTitleData.subtitle;
 
       this.sectionEl.appendChild(subtitleEl);
