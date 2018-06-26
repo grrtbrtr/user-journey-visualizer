@@ -70,7 +70,8 @@ module.exports = {
       }
     ),
     new CopyWebpackPlugin([
-      { from: 'data/**/*.json', to: 'data/[name].[ext]' }
+      { from: 'data/**/*.json', to: 'data/[name].[ext]' },
+      { from: 'data/avatars/*.+(jpeg|jpg|gif|png)', to: 'data/avatars/[name].[ext]' }
     ], {
       debug: 'info',
       context: 'src/'

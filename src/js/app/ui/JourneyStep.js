@@ -7,6 +7,37 @@ const renderElement = (elementType, innerHTML, classes) => {
   return el;
 }
 
+const renderPersona = (personaData) => {
+  const el = renderElement(
+    'div',
+    '',
+    [
+      'step__persona',
+      'persona',
+      'persona--tiny'
+    ]
+  );
+
+  if (personaData.avatar) {
+    const personaAvatarEl = document.createElement('img');
+    personaAvatarEl.src = personaData.avatar;
+    personaAvatarEl.alt = `Image of ${personaData.fullName}`;
+    personaAvatarEl.classList.add('persona__avatar');
+
+    el.appendChild(personaAvatarEl);
+  }
+
+  const personaNameEl = renderElement(
+    'span',
+    personaData.fullName,
+    ['persona__name']
+  );
+
+  el.appendChild(personaNameEl);
+
+  return el;
+}
+
 class JourneyStep {
 
   constructor(stepData, elementType = 'div') {
@@ -26,15 +57,7 @@ class JourneyStep {
       this.stepData.description,
       ['step__description']
     ));
-    this.containerEl.appendChild(renderElement(
-      'p',
-      this.stepData.persona.fullName,
-      [
-        'step__persona',
-        'persona',
-        'persona--tiny'
-      ]
-    ));
+    this.containerEl.appendChild(renderPersona(this.stepData.persona));
 
     return this.containerEl;
   }

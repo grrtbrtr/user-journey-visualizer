@@ -11,7 +11,8 @@
         "lastname": "Doe"
       },
       "company": "Acme Inc.",
-      "jobTitle": "Global Field Marketing Manager"
+      "jobTitle": "Global Field Marketing Manager",
+      "avatar": "/data/avatars/john-doe.png"
     },
     {
       "id": "jane-doedoe",
@@ -20,7 +21,8 @@
         "lastname": "Doedoe"
       },
       "company": "Acme Inc.",
-      "jobTitle": "Field Marketer (Spain)"
+      "jobTitle": "Field Marketer (Spain)",
+      "avatar": "/data/avatars/jane-doedoe.png"
     }
   ],
   "journeys": [

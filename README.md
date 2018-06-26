@@ -31,7 +31,7 @@ This tool visualises multiple user journeys defined in a simple JSON file.
 
 ## Todo's
 
-- [ ] Add support for persona avatars
+- [x] Add support for persona avatars
 - [ ] Clean up & refactor rendering logic
 - [ ] Improve smaller screen support
 - [ ] Refactor HTML structure to better support SCSS 7-1 guidelines

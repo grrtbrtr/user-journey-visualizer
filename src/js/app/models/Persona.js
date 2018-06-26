@@ -19,6 +19,7 @@ class Persona {
       company: null,
       title: null
     };
+    this.avatar = null;
   }
 
   /**

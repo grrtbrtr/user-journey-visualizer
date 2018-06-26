@@ -41,6 +41,10 @@ const parseData = (data) => {
     personaData.jobInformation.company = persona.company;
     personaData.jobInformation.jobTitle = persona.jobTitle;
 
+    if (persona.avatar && persona.avatar !== '') {
+      personaData.avatar = persona.avatar;
+    }
+
     personas.push(personaData);
   });
 
