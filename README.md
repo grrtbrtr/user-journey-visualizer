@@ -33,8 +33,9 @@ This tool visualises multiple user journeys defined in a simple JSON file.
 
 - [ ] Add support for persona avatars
 - [ ] Clean up & refactor rendering logic
+- [ ] Improve smaller screen support
+- [ ] Refactor HTML structure to better support SCSS 7-1 guidelines
 - [ ] Refactor JS file names
-- [ ] Clean up & refactor SCSS files to fit 7-1 logic
 - [ ] Explain the JSON in readme file
 
 ## License
