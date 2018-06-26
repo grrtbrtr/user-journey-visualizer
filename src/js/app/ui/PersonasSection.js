@@ -1,3 +1,36 @@
+const renderAvatar = (imagePath, fullName) => {
+  const personaAvatarEl = document.createElement('img');
+  personaAvatarEl.src = imagePath;
+  personaAvatarEl.alt = `Image of ${fullName}`;
+  personaAvatarEl.classList.add('persona__avatar');
+
+  return personaAvatarEl;
+}
+
+const renderPersona = (personaData) => {
+  const personaEl = document.createElement('li');
+  personaEl.classList.add('personas_list__persona', 'persona');
+
+  if (personaData.avatar) {
+    personaEl.appendChild(renderAvatar(
+      personaData.avatar,
+      personaData.fullName
+    ));
+  }
+
+  const personaInformationEl = document.createElement('div');
+  personaInformationEl.classList.add('persona__information');
+  /* eslint-disable max-len */
+  personaInformationEl.innerHTML = `<p class="persona__name">${personaData.fullName}</p>
+    <p class="persona__job_info">
+      ${personaData.jobInformation.jobTitle} at ${personaData.jobInformation.company}
+    </p>`;
+  /* eslint-enable max-len */
+  personaEl.appendChild(personaInformationEl);
+
+  return personaEl;
+}
+
 class PersonasSection {
 
   /**
@@ -41,17 +74,7 @@ class PersonasSection {
     personasContainerEl.classList.add('personas__list', 'personas_list');
 
     this.personas.forEach((persona) => {
-      const personaEl = document.createElement('li');
-
-      personaEl.classList.add('personas_list__persona', 'persona');
-      /* eslint-disable max-len */
-      personaEl.innerHTML = `<p class="persona__name">${persona.fullName}</p>
-        <p class="persona__job_info">
-          ${persona.jobInformation.jobTitle} at ${persona.jobInformation.company}
-        </p>`;
-      /* eslint-enable max-len */
-
-      personasContainerEl.appendChild(personaEl);
+      personasContainerEl.appendChild(renderPersona(persona));
     });
 
     this.sectionEl.appendChild(personasContainerEl);

@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains styles for the project title section/page.
+// -----------------------------------------------------------------------------
+
+.project_title {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__subtitle {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    color: rgba(#000000, 0.60);
+  }
+}

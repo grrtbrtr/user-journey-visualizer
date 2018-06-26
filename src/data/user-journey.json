@@ -1,102 +1,104 @@
 {
   "projectInformation": {
-    "title": "Space creation from search",
-    "subtitle": "User journeys for search space creation"
+    "title": "Content group creation from search",
+    "subtitle": "User journeys"
   },
   "personas": [
     {
-      "id": "brenda-linden",
+      "id": "john-doe",
       "name": {
-        "firstname": "Brenda",
-        "lastname": "Linden"
+        "firstname": "John",
+        "lastname": "Doe"
       },
-      "company": "Suono",
-      "jobTitle": "Global Field Marketing Manager"
+      "company": "Acme Inc.",
+      "jobTitle": "Global Field Marketing Manager",
+      "avatar": "/data/avatars/john-doe.png"
     },
     {
-      "id": "lin-snow",
+      "id": "jane-doedoe",
       "name": {
-        "firstname": "Lin",
-        "lastname": "Snow"
+        "firstname": "Jane",
+        "lastname": "Doedoe"
       },
-      "company": "Suono",
-      "jobTitle": "Field Marketer (Spain)"
+      "company": "Acme Inc.",
+      "jobTitle": "Field Marketer (Spain)",
+      "avatar": "/data/avatars/jane-doedoe.png"
     }
   ],
   "journeys": [
     {
       "title": "User journey A",
-      "subtitle": "Lin wants to make new campaign content available to her local market resellers. Lin cannot publish content, but Brenda can do it for her.",
+      "subtitle": "Jane wants to make new campaign content available to her local market resellers. Jane cannot publish content, but John can do it for her.",
       "steps": [
         {
-          "persona": "lin-snow",
-          "description": "Lin performs a search for the content she wants to make available"
+          "persona": "jane-doedoe",
+          "description": "Jane performs a search for the content she wants to make available"
         },
         {
-          "persona": "lin-snow",
-          "description": "Lin identified the content she wants to make available"
+          "persona": "jane-doedoe",
+          "description": "Jane identified the content she wants to make available"
         },
         {
-          "persona": "lin-snow",
-          "description": "Lin indicates that she wants to share the content with Brenda"
+          "persona": "jane-doedoe",
+          "description": "Jane indicates that she wants to share the content with John"
         },
         {
-          "persona": "lin-snow",
-          "description": "Lin shares the content with Brenda, along with an additional message containing her request to publish the content"
+          "persona": "jane-doedoe",
+          "description": "Jane shares the content with John, along with an additional message containing her request to publish the content"
         },
         {
-          "persona": "brenda-linden",
-          "description": "Brenda gets notified that Lin shared content with her"
+          "persona": "john-doe",
+          "description": "John gets notified that Jane shared content with him"
         },
         {
-          "persona": "brenda-linden",
-          "description": "Brenda clicks a call-to-action in the notification to see the content & message Lin shared with her"
+          "persona": "john-doe",
+          "description": "John clicks a call-to-action in the notification to see the content & message Jane shared with him"
         },
         {
-          "persona": "brenda-linden",
-          "description": "Brenda shares the content with the target audience"
+          "persona": "john-doe",
+          "description": "John shares the content with the target audience"
         },
         {
-          "persona": "lin-snow",
-          "description": "Lin gets notified that Brenda shared the content"
+          "persona": "jane-doedoe",
+          "description": "Jane gets notified that John shared the content"
         }
       ]
     },
     {
       "title": "User journey B",
-      "subtitle": "Lin wants to make new campaign content available to her local market resellers. Lin cannot publish content, but Brenda can do it for her.",
+      "subtitle": "Jane wants to make new campaign content available to her local market resellers. Jane cannot publish content, but John can do it for her.",
       "steps": [
         {
-          "persona": "lin-snow",
-          "description": "Lin performs a search for the content she wants to make available"
+          "persona": "jane-doedoe",
+          "description": "Jane performs a search for the content she wants to make available"
         },
         {
-          "persona": "lin-snow",
-          "description": "Lin identified the content she wants to make available"
+          "persona": "jane-doedoe",
+          "description": "Jane identified the content she wants to make available"
         },
         {
-          "persona": "lin-snow",
-          "description": "Lin indicates that she wants to share the content with Brenda"
+          "persona": "jane-doedoe",
+          "description": "Jane indicates that she wants to share the content with John"
         },
         {
-          "persona": "lin-snow",
-          "description": "Lin shares the content with Brenda, along with an additional message containing her request to publish the content"
+          "persona": "jane-doedoe",
+          "description": "Jane shares the content with John, along with an additional message containing her request to publish the content"
         },
         {
-          "persona": "brenda-linden",
-          "description": "Brenda gets notified that Lin shared content with her"
+          "persona": "john-doe",
+          "description": "John gets notified that Jane shared content with him"
         },
         {
-          "persona": "brenda-linden",
-          "description": "Brenda clicks a call-to-action in the notification to see the content & message Lin shared with her"
+          "persona": "john-doe",
+          "description": "John clicks a call-to-action in the notification to see the content & message Jane shared with him"
         },
         {
-          "persona": "brenda-linden",
-          "description": "Brenda shares the content with the target audience"
+          "persona": "john-doe",
+          "description": "John shares the content with the target audience"
         },
         {
-          "persona": "lin-snow",
-          "description": "Lin gets notified that Brenda shared the content"
+          "persona": "jane-doedoe",
+          "description": "Jane gets notified that John shared the content"
         }
       ]
     }

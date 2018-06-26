@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains persona step component styles.
+// -----------------------------------------------------------------------------
+
+.step {
+  background: #FFFFFF;
+  border-radius: 0.5rem;
+  border: 1px solid mix(#000000, #FFFFFF, 5%);
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  position: relative;
+
+  &__description {
+    margin: 0 0 1rem;
+  }
+
+  &__persona {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  & + & {
+    &::before {
+      content: '';
+      width: calc(2.5rem - (2 * 0.5rem));
+      height: 1px;
+      background: rgba(#000000, 0.40);
+      position: absolute;
+      left: calc(-2.5rem + 0.5rem);
+      top: 50%;
+    }
+  }
+}
