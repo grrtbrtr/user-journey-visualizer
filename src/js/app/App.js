@@ -114,6 +114,16 @@ class App {
       const data = parseData(response);
 
       this.ui.render(data);
+
+      document.addEventListener('keydown', (evt) => {
+        if (evt.keyCode === 37 || evt.keyCode === 38) {
+          evt.preventDefault();
+          this.ui.scrollTo('previous');
+        } else if (evt.keyCode === 39 || evt.keyCode === 40) {
+          evt.preventDefault();
+          this.ui.scrollTo('next');
+        }
+      });
     }, (error) => {
       console.log(error); // eslint-disable-line no-console
     });
