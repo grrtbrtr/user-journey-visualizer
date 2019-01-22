@@ -20,12 +20,12 @@ const renderPersona = (personaData) => {
 
   const personaInformationEl = document.createElement('div');
   personaInformationEl.classList.add('persona__information');
-  /* eslint-disable max-len */
-  personaInformationEl.innerHTML = `<p class="persona__name">${personaData.fullName}</p>
+  personaInformationEl.innerHTML =
+    `<p class="persona__name">${personaData.fullName}</p>
     <p class="persona__job_info">
-      ${personaData.jobInformation.jobTitle} at ${personaData.jobInformation.company}
+      ${personaData.jobInformation.jobTitle}<br />
+      at ${personaData.jobInformation.company}
     </p>`;
-  /* eslint-enable max-len */
   personaEl.appendChild(personaInformationEl);
 
   return personaEl;
