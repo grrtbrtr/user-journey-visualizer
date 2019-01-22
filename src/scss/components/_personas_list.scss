@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .personas_list {
-  margin: 0;
+  margin: 0 -1.25rem;
   padding: 0;
   list-style: none outside none;
   display: flex;
@@ -12,13 +12,11 @@
   &__persona {
     flex: 0 0 100%;
     margin-bottom: 2.5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
 
     @include respond-to('medium') {
       flex-basis: 20rem;
-
-      & + & {
-        margin-left: 2.5rem;
-      }
     }
   }
 }
